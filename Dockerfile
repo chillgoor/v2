@@ -1,8 +1,8 @@
 FROM alpine:3.5
 ENV CONFIG_JSON=none
 RUN apk add --no-cache --virtual .build-deps ca-certificates curl \
- && curl -L -H "Cache-Control: no-cache" -o /v2ray.zip https://github.com/v2fly/v2ray-core/releases/download/v4.28.1/v2ray-linux-64.zip \
-# 源4.27.4
+ && curl -L -H "Cache-Control: no-cache" -o /v2ray.zip https://github.com/v2fly/v2ray-core/releases/download/v4.28.2/v2ray-linux-64.zip \
+# 源
  && mkdir /usr/bin/v2ray /etc/v2ray \
  && touch /etc/v2ray/config.json \
  && unzip /v2ray.zip -d /usr/bin/v2ray \
